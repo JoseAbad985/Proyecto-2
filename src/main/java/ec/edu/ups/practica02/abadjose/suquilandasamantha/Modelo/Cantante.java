@@ -35,12 +35,7 @@ public class Cantante extends Persona {
     public Cantante(int codigo) {
         super(codigo);
     }
-    
-    
-
-    
-
-
+   
     public String getNombreArtistico() {
         return nombreArtistico;
     }
