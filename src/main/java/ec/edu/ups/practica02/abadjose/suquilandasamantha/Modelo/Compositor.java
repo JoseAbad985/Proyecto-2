@@ -108,12 +108,7 @@ public class Compositor extends Persona{
     }
             
     //Metodo agregarCanción
-    public void agregarCancion(int codigo, String titulo, String letra, double tiempoEnMinutos){
-        Cancion cancion = new Cancion(codigo, titulo, letra, tiempoEnMinutos);
+    public void agregarCancion(Cancion cancion){
         cancionesTop100Billboard.add(cancion);
-    }
-    //Metodo agregar cliente
-    public void agregarCliente(Cantante cliente){
-        clientes.add(cliente);
     }
 }  

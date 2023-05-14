@@ -64,17 +64,17 @@ public class VistaCompositor {
         return new Compositor(codigo);
     }
 
-    public int buscarCantante() {
+    public int buscarCompositor() {
         System.out.println("Ingresa el codigo del compositor a buscar");
         int id = teclado.nextInt();
         return id;
     }
 
-    public void verCantante(Compositor compositor) {
+    public void verCompositor(Compositor compositor) {
         System.out.println("Datos del Compositor: " + compositor);
     }
 
-    public void verClientes(List<Compositor> compositores) {
+    public void verCompositores(List<Compositor> compositores) {
         for (Compositor compositor : compositores) {
             System.out.println("Datos del Compositor: " + compositor);
         }

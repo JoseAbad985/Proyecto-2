@@ -4,6 +4,7 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO;
 
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICantanteDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,21 +28,21 @@ public class CantanteDAO implements ICantanteDAO{
     }
 
     @Override
-    public Cliente read(int id) {
-        for (Cliente cliente : listaCliente) {
-            if (cliente.getId() == id) {
-                return cliente;
+    public Cantante read(int id) {
+        for (Cantante cantante : listaCantante) {
+            if (cantante.getCodigo() == id) {
+                return cantante;
             }
         }
         return null;
     }
 
     @Override
-    public void update(Cliente cliente) {
-        for (int i = 0; i < listaCliente.size(); i++) {
-            Cliente c = listaCliente.get(i);
-            if (c.getId() == cliente.getId()) {
-                listaCliente.set(i, cliente);
+    public void update(Cantante cantante) {
+        for (int i = 0; i < listaCantante.size(); i++) {
+            Cantante c = listaCantante.get(i);
+            if (c.getCodigo() == cantante.getCodigo()) {
+                listaCantante.set(i, cantante);
                 break;
             }
         }
@@ -49,11 +50,11 @@ public class CantanteDAO implements ICantanteDAO{
     }
 
     @Override
-    public void delete(Cliente cliente) {
-        Iterator<Cliente> it = listaCliente.iterator();
+    public void delete(Cantante cantante) {
+        Iterator<Cantante> it = listaCantante.iterator();
         while (it.hasNext()) {
-            Cliente c = it.next();
-            if (c.getId() == cliente.getId()) {
+            Cantante c = it.next();
+            if (c.getCodigo() == cantante.getCodigo()) {
                 it.remove();
                 break;
             }
@@ -61,9 +62,8 @@ public class CantanteDAO implements ICantanteDAO{
     }
 
     @Override
-    public List<Cliente> findAll() {
-        return listaCliente;
+    public List<Cantante> findAll() {
+        return listaCantante;
     }
 
-}
 }

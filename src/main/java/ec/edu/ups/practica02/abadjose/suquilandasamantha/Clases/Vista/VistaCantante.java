@@ -14,10 +14,10 @@ import java.util.Scanner;
  * @author ESTUDIANTE
  */
 public class VistaCantante {
-    
+
     private Scanner teclado;
-    
-    public Cantante ingresarCantante(){
+
+    public Cantante ingresarCantante() {
         teclado.nextLine();
         System.out.println("Ingrese el nombre del cantante: ");
         String nombre = teclado.nextLine();
@@ -45,7 +45,8 @@ public class VistaCantante {
         int numeroDeGiras = teclado.nextInt();
         return new Cantante(nombreArtistico, generoMusical, numeroDeSencillos, numeroDeConciertos, numeroDeGiras, codigo, nombre, apellido, edad, nacionalidad, salario);
     }
-    public Cantante actualizarCantante(){
+
+    public Cantante actualizarCantante() {
         System.out.println("Ingresa el id del cliente a actualizar");
         int id = teclado.nextInt();
         System.out.println("Ingrese el nuevo nombre del cantante: ");
@@ -71,26 +72,27 @@ public class VistaCantante {
         System.out.println("Ingrese el nuevo numero de giras del cantante: ");
         int numeroDeGiras = teclado.nextInt();
         return new Cantante(nombreArtistico, generoMusical, numeroDeSencillos, numeroDeConciertos, numeroDeGiras, edad, nombre, apellido, edad, nacionalidad, salario);
-        }
-    public Cantante eliminarCantante(){
+    }
+
+    public Cantante eliminarCantante() {
         System.out.println("Ingresa el codigo del cantante a eliminar");
         int id = teclado.nextInt();
         return new Cantante(id);
     }
-    public int buscarCantante(){
+
+    public int buscarCantante() {
         System.out.println("Ingresa el id del cantante a buscar");
         int id = teclado.nextInt();
         return id;
     }
+
     public void verCantante(Cantante cantante) {
         System.out.println("Datos del Cantante: " + cantante);
     }
-    public void verClientes(List<Cantante> cantantes) {
+
+    public void verCantantes(List<Cantante> cantantes) {
         for (Cantante cantante : cantantes) {
             System.out.println("Datos del Cantante: " + cantante);
         }
     }
-        
-    }
-               
-
+}

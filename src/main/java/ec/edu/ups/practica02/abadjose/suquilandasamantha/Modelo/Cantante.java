@@ -166,7 +166,7 @@ public class Cantante extends Persona {
         if (discografia.size()>=5) {
             salarioFinal += 2000;
         }
-
+//
         return salarioFinal;
     }
 }

@@ -16,6 +16,10 @@ public class Disco {
         this.nombre = nombre;
         this.anioDeLanzamiento = anioDeLanzamiento;
     }
+
+    public Disco(int codigo) {
+        this.codigo = codigo;
+    }
     
 
     public int getCodigo() {

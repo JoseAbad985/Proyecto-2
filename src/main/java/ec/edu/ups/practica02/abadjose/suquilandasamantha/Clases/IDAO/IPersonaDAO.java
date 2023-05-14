@@ -10,7 +10,7 @@ import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Persona;
  *
  * @author ESTUDIANTE
  */
-public interface IControlador {
+public interface IPersonaDAO {
     
     public final int MAX_OBJECTS =10;
     

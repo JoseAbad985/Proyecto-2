@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author ESTUDIANTE
  */
-public class ControladorPersona implements IControlador {
+public class ControladorPersona implements IPersonaDAO {
     private List<Persona> personas;
 
     public ControladorPersona() {

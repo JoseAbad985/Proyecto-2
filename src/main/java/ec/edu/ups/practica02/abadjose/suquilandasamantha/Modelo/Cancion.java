@@ -23,7 +23,12 @@ public class Cancion {
         this.letra = letra;
         this.tiempoEnMinutos = tiempoEnMinutos;
     }
+    
 
+    public Cancion(int codigo) {
+        this.codigo = codigo;
+    }
+    
     public int getCodigo() {
         return codigo;
     }

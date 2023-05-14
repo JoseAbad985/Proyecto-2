@@ -4,10 +4,18 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO;
 
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
+import java.util.List;
+
 /**
  *
  * @author ESTUDIANTE
  */
-public class ICantanteDAO {
-    
+public interface ICantanteDAO {
+    public void create(Cantante cantate);
+    public Cantante read(int id);
+    public void update(Cantante cantante);
+    public void delete(Cantante cantante);   
+    public List<Cantante> findAll();
 }
+
