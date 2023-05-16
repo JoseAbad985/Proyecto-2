@@ -58,8 +58,20 @@ public class ControladorCantante {
         vistaCantante.verCantante(cantante);
     }
     public void verCantantexDisco(){
-        String nombre =  
+        String nombre = vistaDisco.buscarDiscoNombre();
+        List<Cantante> cantantes = cantanteDAO.findAll();   
+        for (Cantante cantante : cantantes){
+            List<Disco> discos = cantante.getDiscografia();
+            for (Disco disco : discos){
+                if(disco.getNombre().equals(nombre));
+                Cantante cantanteF = cantante;
+                vistaCantante.verCantante(cantanteF);
+            }
+        }
     }
+            
+   
+    
 
     //llama al DAO para actualizar un cantante
     public void actualizar() {

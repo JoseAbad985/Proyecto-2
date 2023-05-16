@@ -4,7 +4,6 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.IDiscoDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaDisco;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Disco;
 import java.util.List;
@@ -30,6 +29,7 @@ public class ControladorDisco {
     //llama al DAO para guardar un disco
     public void registrar() {
         disco = vistaDisco.ingresarDisco();
+        
     }
 
     //llama al DAO para obtener un disco por el id y luego los muestra en la vista
@@ -41,19 +41,16 @@ public class ControladorDisco {
     //llama al DAO para actualizar un disco
     public void actualizar() {
         disco = vistaDisco.actualizarDisco();
-        discoDAO.update(disco);
     }
 
     //llama al DAO para eliminar un cantante
     public void eliminar() {
         disco = vistaDisco.eliminarDisco();
-        discoDAO.delete(disco);
     }
 
     //llama al DAO para obtener todos los cantantes y luego los muestra en la vista
     public void verDiscos() {
         List<Disco> discos;
-        vistaDisco.verDiscos(discos);
     }
 
 }

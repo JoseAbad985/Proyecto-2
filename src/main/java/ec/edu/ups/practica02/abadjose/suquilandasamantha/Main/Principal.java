@@ -9,16 +9,9 @@ import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCanci
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCantante;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCompositor;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaDisco;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorCancion;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorCantante;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorCompositor;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorDisco;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Persona;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Compositor;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorPersona;
 import java.util.Scanner;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.IPersonaDAO;
 
 /**
  *
@@ -60,31 +53,21 @@ public class Principal {
                     controladorCantante.registrar();
                     
                     //Se llama al metodo calcular salario 
-                    Cantante.calcularSalario();
                 case 2:
                     controladorCompositor.registrar();
                     //Se llama al metodo calcular salario
                 case 3:
                     controladorCompositor.registrarCliente();
-                    
                 case 4:
                     controladorCantante.verCantantes();
                     controladorCompositor.verCompositor();
                 case 5:
-                    
-                
-
-                case 6 -> {
-                    teclado.nextLine();
-                    System.out.println("Ingrese el titulo de la cancion que desea buscar: ");
-                    String titulo = teclado.nextLine();
-                    controladorPersonaCast.buscarPorTituloDeCancion(titulo);
-                }
-
-                case 7 -> {
-                }
-
-                default ->
+                    controladorCantante.verCantantexDisco();
+                case 6:
+                    controladorCompositor.verCompositorxCancion();
+                case 7:
+                    System.out.println("Gracias :D ");
+                default:
                     System.out.println("La opcion ingresda no es valida");
 
             }

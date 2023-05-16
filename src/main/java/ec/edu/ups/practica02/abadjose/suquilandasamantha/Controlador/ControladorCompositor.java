@@ -49,7 +49,18 @@ public class ControladorCompositor {
 
     }
     
-
+    public void verCompositorxCancion(){
+        String nombre = vistaCancion.buscarCancionNombre();
+        List<Compositor> compositores = compositorDAO.findAll();
+        for(Compositor compositor : compositores){
+            List<Cancion> canciones = compositor.getCancionesTop100Billboard();
+            for(Cancion cancion : canciones){
+                if(cancion.getTitulo().equals(nombre));
+                Compositor compositorF = compositor;
+                vistaCompositor.verCompositor(compositorF);
+            }
+        }
+    }
     //llama al DAO para guardar un compositor
     public void registrar() {
         compositor = vistaCompositor.ingresarCompositor();

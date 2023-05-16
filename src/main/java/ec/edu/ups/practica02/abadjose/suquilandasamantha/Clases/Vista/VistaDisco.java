@@ -49,10 +49,10 @@ public class VistaDisco {
         int id = teclado.nextInt();
         return id;
     }
-    public Disco buscarDiscoNombre(){
+    public String buscarDiscoNombre(){
         System.out.println("Ingresa el nombre del disco a buscar");
         String nombre = teclado.next();
-        return Disco(nombre) ;
+        return nombre;
     }
 
     public void verDisco(Disco disco) {

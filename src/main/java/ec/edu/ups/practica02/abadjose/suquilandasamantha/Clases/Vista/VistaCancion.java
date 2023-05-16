@@ -3,9 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista;
-
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cancion;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
 import java.util.List;
 import java.util.Scanner;
 
@@ -53,6 +51,12 @@ public class VistaCancion {
         int id = teclado.nextInt();
         return id;
     }
+        public String buscarCancionNombre(){
+        System.out.println("Ingresa el nombre de la canción a buscar");
+        String nombre = teclado.next();
+        return nombre;
+    }
+        
     public void verCancion(Cancion cancion) {
         System.out.println("Datos de la canción: " + cancion);
     }

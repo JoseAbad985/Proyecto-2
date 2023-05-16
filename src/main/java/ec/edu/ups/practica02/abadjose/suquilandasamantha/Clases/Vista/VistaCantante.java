@@ -4,9 +4,7 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorDisco;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Persona;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,11 +15,13 @@ import java.util.Scanner;
 public class VistaCantante {
 
     private Scanner teclado;
-
+    
     public Cantante ingresarCantante() {
-        teclado.nextLine();
+        
+        Scanner teclado = new Scanner(System.in); 
+        
         System.out.println("Ingrese el nombre del cantante: ");
-        String nombre = teclado.nextLine();
+        String nombre = teclado.next();
         System.out.println("Ingrese el apellido del cantante: ");
         String apellido = teclado.nextLine();
         System.out.println("Ingrese la edad del cantante: ");
