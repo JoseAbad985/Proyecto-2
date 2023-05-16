@@ -65,7 +65,7 @@ public class VistaCompositor {
     }
 
     public int buscarCompositor() {
-        System.out.println("Ingresa el codigo del compositor a buscar");
+        System.out.println("Ingresa el codigo del compositor al que se le asignará un Cliente: ");
         int id = teclado.nextInt();
         return id;
     }

@@ -18,13 +18,11 @@ public class ControladorDisco {
     private VistaDisco vistaDisco;
     //objetos modelo
     private Disco disco;
-    //objetos DAO
-    private IDiscoDAO discoDAO;
 
-    public ControladorDisco(VistaDisco vistaDisco, Disco disco, IDiscoDAO discoDAO) {
+
+    public ControladorDisco(VistaDisco vistaDisco, Disco disco) {
         this.vistaDisco = vistaDisco;
         this.disco = disco;
-        this.discoDAO = discoDAO;
     }
 
     
@@ -32,13 +30,11 @@ public class ControladorDisco {
     //llama al DAO para guardar un disco
     public void registrar() {
         disco = vistaDisco.ingresarDisco();
-        discoDAO.create(disco);
     }
 
     //llama al DAO para obtener un disco por el id y luego los muestra en la vista
-    public void verCantante() {
+    public void verDisco() {
         int id = vistaDisco.buscarDisco();
-        disco = discoDAO.read(id);
         vistaDisco.verDisco(disco);
     }
 
@@ -57,7 +53,6 @@ public class ControladorDisco {
     //llama al DAO para obtener todos los cantantes y luego los muestra en la vista
     public void verDiscos() {
         List<Disco> discos;
-        discos = discoDAO.findAll();
         vistaDisco.verDiscos(discos);
     }
 

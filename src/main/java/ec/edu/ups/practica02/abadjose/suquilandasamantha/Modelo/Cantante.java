@@ -32,6 +32,16 @@ public class Cantante extends Persona {
         this.discografia = new ArrayList();
     }
 
+    public Cantante(String nombreArtistico, String generoMusical, int numeroDeSencillos, int numeroDeConciertos, int numeroDeGiras, List<Disco> discografia, int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
+        super(codigo, nombre, apellido, edad, nacionalidad, salario);
+        this.nombreArtistico = nombreArtistico;
+        this.generoMusical = generoMusical;
+        this.numeroDeSencillos = numeroDeSencillos;
+        this.numeroDeConciertos = numeroDeConciertos;
+        this.numeroDeGiras = numeroDeGiras;
+        this.discografia = discografia;
+    }
+    
     public Cantante(int codigo) {
         super(codigo);
     }
@@ -134,6 +144,14 @@ public class Cantante extends Persona {
     public void agregarDisco(Disco disco){
         discografia.add(disco);
     }
+    
+    public String buscarDisco(Disco disco){
+        if(discografia.contains(disco)){
+            return this.getNombre();
+        }
+        return ("No existe");
+    }
+    
     public void eliminarDisco(Disco disco) {
         if (discografia.contains(disco)) {
             int index = discografia.indexOf(disco);
@@ -169,5 +187,5 @@ public class Cantante extends Persona {
 //
         return salarioFinal;
     }
+        
 }
-

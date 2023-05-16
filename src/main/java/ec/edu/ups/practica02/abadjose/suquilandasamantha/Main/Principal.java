@@ -3,10 +3,8 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Main;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO.CancionDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO.CantanteDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO.CompositorDAO;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO.DiscoDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCancion;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCantante;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCompositor;
@@ -14,6 +12,7 @@ import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaDisco
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorCancion;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorCantante;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorCompositor;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorDisco;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Persona;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Compositor;
@@ -53,13 +52,9 @@ public class Principal {
             //DAOs//
             CantanteDAO cantanteDAO = new CantanteDAO();
             CompositorDAO compositorDAO = new CompositorDAO();
-            CancionDAO cancionDAO = new CancionDAO();
-            DiscoDAO discoDAO = new DiscoDAO();
             //Controladores//
-            ControladorCantante controladorCantante = new ControladorCantante(vistaCantante, vistaDisco, cantanteDAO, discoDAO);
-            ControladorCompositor controladorCompositor = new ControladorCompositor(vistaComp, vistaCancion, compositorDAO, cancionDAO);
-            ControladorCancion controladorCancion = new ControladorCancion(vistaCancion, cancionDAO);
-            
+            ControladorCantante controladorCantante = new ControladorCantante(vistaCantante, vistaDisco, cantanteDAO);
+            ControladorCompositor controladorCompositor = new ControladorCompositor(vistaComp, vistaCancion,compositorDAO);
             switch (opcion) {
                 case 1:
                     controladorCantante.registrar();
@@ -68,27 +63,15 @@ public class Principal {
                     Cantante.calcularSalario();
                 case 2:
                     controladorCompositor.registrar();
-                    Compositor.calcularSalario();
+                    //Se llama al metodo calcular salario
                 case 3:
-                    teclado.nextLine();//posible salto de de nextInt
-                    System.out.println("Ingrese el codigo del cantante(cliente): ");
-                    int codigo = teclado.nextInt();
-                    Cantante cantanteCasting = (Cantante) controladorPersonaCast.buscarPorCodigoCantante(codigo);
-                    System.out.println("Ingrese el codigo del compositor: ");
-                    int codigo = teclado.nextInt();
-                    Compositor compositorCast = (Compositor) controladorPersonaCast.buscarPorCodigoCompositor(codigo);
-                    if (compositorCast instanceof Persona && compositorCast instanceof Persona) {
-                        compositorCast.agregarCliente(cantanteCasting);
-                    }
-                
+                    controladorCompositor.registrarCliente();
+                    
                 case 4:
                     controladorCantante.verCantantes();
                     controladorCompositor.verCompositor();
                 case 5:
-                    teclado.nextLine();
-                    System.out.println("Por favor ingrese el nombre del disco que desea buscar: ");
-                    String valor = teclado.nextLine();
-                    controladorPersonaCast.buscarPorNombreDeDisco(valor);
+                    
                 
 
                 case 6 -> {

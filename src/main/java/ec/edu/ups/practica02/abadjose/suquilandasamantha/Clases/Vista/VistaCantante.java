@@ -4,6 +4,7 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista;
 
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador.ControladorDisco;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Persona;
 import java.util.List;

@@ -111,4 +111,7 @@ public class Compositor extends Persona{
     public void agregarCancion(Cancion cancion){
         cancionesTop100Billboard.add(cancion);
     }
+    public void agregarCliente(Cantante cliente){
+        clientes.add(cliente);
+    }
 }  
