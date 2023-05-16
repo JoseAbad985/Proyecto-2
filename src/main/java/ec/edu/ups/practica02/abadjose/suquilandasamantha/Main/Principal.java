@@ -47,28 +47,36 @@ public class Principal {
             CompositorDAO compositorDAO = new CompositorDAO();
             //Controladores//
             ControladorCantante controladorCantante = new ControladorCantante(vistaCantante, vistaDisco, cantanteDAO);
-            ControladorCompositor controladorCompositor = new ControladorCompositor(vistaComp, vistaCancion,compositorDAO);
+            ControladorCompositor controladorCompositor = new ControladorCompositor(vistaComp, vistaCancion, compositorDAO);
             switch (opcion) {
                 case 1:
                     controladorCantante.registrar();
-                    
-                    //Se llama al metodo calcular salario 
+                    break;
+
+                //Se llama al metodo calcular salario 
                 case 2:
                     controladorCompositor.registrar();
-                    //Se llama al metodo calcular salario
+                    break;
+                //Se llama al metodo calcular salario
                 case 3:
                     controladorCompositor.registrarCliente();
+                    break;
                 case 4:
                     controladorCantante.verCantantes();
                     controladorCompositor.verCompositor();
+                    break;
                 case 5:
                     controladorCantante.verCantantexDisco();
+                    break;
                 case 6:
                     controladorCompositor.verCompositorxCancion();
+                    break;
                 case 7:
                     System.out.println("Gracias :D ");
+                    break;
                 default:
                     System.out.println("La opcion ingresda no es valida");
+                    break;
 
             }
             //En el caso 1 del menu se ingresa todos los atributos que le pertenecen, por medio del usuario

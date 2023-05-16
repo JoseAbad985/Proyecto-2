@@ -15,6 +15,8 @@ public class VistaCancion {
     private Scanner teclado;
     
     public Cancion ingresarCancion(){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Se ingresará una cancion para el Compositor");
         teclado.nextLine();
         System.out.println("Ingrese el codigo de la cancion: ");
         int codigoCan = teclado.nextInt();
@@ -28,6 +30,7 @@ public class VistaCancion {
         return new Cancion(codigoCan, titulo, letra, tiempoEnMinutos);
     }
     public Cancion actualizarCancion(){
+        Scanner teclado = new Scanner(System.in);
         teclado.nextLine();
         System.out.println("Ingrese el codigo de la cancion: ");
         int codigoCan = teclado.nextInt();
@@ -42,25 +45,30 @@ public class VistaCancion {
     }  
         
     public Cancion eliminarCancion(){
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa el codigo de la canción a eliminar");
         int id = teclado.nextInt();
         return new Cancion(id);
     }
     public int buscarCancion(){
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa el codigo de la canción a buscar");
         int id = teclado.nextInt();
         return id;
     }
         public String buscarCancionNombre(){
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa el nombre de la canción a buscar");
         String nombre = teclado.next();
         return nombre;
     }
         
     public void verCancion(Cancion cancion) {
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Datos de la canción: " + cancion);
     }
     public void verCanciones(List<Cancion> canciones) {
+        Scanner teclado = new Scanner(System.in);
         for (Cancion cancion : canciones) {
             System.out.println("Datos del Cantante: " + cancion);
         }

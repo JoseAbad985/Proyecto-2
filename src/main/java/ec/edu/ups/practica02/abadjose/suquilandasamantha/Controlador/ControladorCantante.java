@@ -48,6 +48,7 @@ public class ControladorCantante {
         cantante = vistaCantante.ingresarCantante();
         //ejemplo de agregación
         disco = vistaDisco.ingresarDisco();
+        System.out.println("Se ingresará un Disco para el Cantante");
         cantante.agregarDisco(disco);
         cantanteDAO.create(cantante);
     }

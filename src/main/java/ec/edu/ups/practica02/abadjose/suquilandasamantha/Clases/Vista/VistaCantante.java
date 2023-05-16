@@ -21,7 +21,7 @@ public class VistaCantante {
         Scanner teclado = new Scanner(System.in); 
         
         System.out.println("Ingrese el nombre del cantante: ");
-        String nombre = teclado.next();
+        String nombre = teclado.nextLine();
         System.out.println("Ingrese el apellido del cantante: ");
         String apellido = teclado.nextLine();
         System.out.println("Ingrese la edad del cantante: ");

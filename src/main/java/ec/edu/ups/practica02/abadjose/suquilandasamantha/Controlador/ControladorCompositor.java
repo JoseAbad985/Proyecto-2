@@ -4,7 +4,6 @@
  */
 package ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO.CantanteDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICantanteDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICompositorDAO;
 import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCancion;
