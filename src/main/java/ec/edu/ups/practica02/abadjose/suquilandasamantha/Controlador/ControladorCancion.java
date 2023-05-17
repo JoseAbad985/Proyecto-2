@@ -51,8 +51,5 @@ public class ControladorCancion {
     }
 
     //llama al DAO para obtener todos los cantantes y luego los muestra en la vista
-    public void verCanciones() {
-        List<Cancion> canciones;
-    }
 
 }

@@ -17,7 +17,7 @@ public class VistaCompositor {
     private Scanner teclado;
 
     public Compositor ingresarCompositor() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         System.out.println("Ingrese el nombre del compositor: ");
         String nombre = teclado.nextLine();
         System.out.println("Ingrese el apellido del compositor: ");
@@ -38,7 +38,7 @@ public class VistaCompositor {
     }
 
     public Compositor actualizarCompositor() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         teclado.nextLine();//Un salto de nextInt
         System.out.println("Ingrese el nuevo nombre del compositor: ");
         String nombre = teclado.nextLine();
@@ -60,26 +60,26 @@ public class VistaCompositor {
     }
 
     public Compositor eliminarCompositor() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         System.out.println("Ingresa el codigo del compositor a eliminar");
         int codigo = teclado.nextInt();
         return new Compositor(codigo);
     }
 
     public int buscarCompositor() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         System.out.println("Ingresa el codigo del compositor al que se le asignará un Cliente: ");
         int id = teclado.nextInt();
         return id;
     }
 
     public void verCompositor(Compositor compositor) {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         System.out.println("Datos del Compositor: " + compositor);
     }
 
     public void verCompositores(List<Compositor> compositores) {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         for (Compositor compositor : compositores) {
             System.out.println("Datos del Compositor: " + compositor);
         }

@@ -48,9 +48,5 @@ public class ControladorDisco {
         disco = vistaDisco.eliminarDisco();
     }
 
-    //llama al DAO para obtener todos los cantantes y luego los muestra en la vista
-    public void verDiscos() {
-        List<Disco> discos;
-    }
 
 }

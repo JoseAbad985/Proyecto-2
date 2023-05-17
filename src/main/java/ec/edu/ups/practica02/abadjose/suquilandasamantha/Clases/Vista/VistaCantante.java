@@ -15,11 +15,11 @@ import java.util.Scanner;
 public class VistaCantante {
 
     private Scanner teclado;
-    
+
     public Cantante ingresarCantante() {
-        
-        Scanner teclado = new Scanner(System.in); 
-        
+
+        teclado = new Scanner(System.in);
+
         System.out.println("Ingrese el nombre del cantante: ");
         String nombre = teclado.nextLine();
         System.out.println("Ingrese el apellido del cantante: ");
@@ -48,6 +48,7 @@ public class VistaCantante {
     }
 
     public Cantante actualizarCantante() {
+        teclado = new Scanner(System.in);
         System.out.println("Ingresa el id del cliente a actualizar");
         int id = teclado.nextInt();
         System.out.println("Ingrese el nuevo nombre del cantante: ");
@@ -76,25 +77,27 @@ public class VistaCantante {
     }
 
     public Cantante eliminarCantante() {
+        teclado = new Scanner(System.in);
         System.out.println("Ingresa el codigo del cantante a eliminar");
         int id = teclado.nextInt();
         return new Cantante(id);
     }
 
     public int buscarCantante() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
         System.out.println("Ingresa el id del cantante a buscar");
         int id = teclado.nextInt();
         return id;
     }
 
     public void verCantante(Cantante cantante) {
+        teclado = new Scanner(System.in);
         System.out.println("Datos del Cantante: " + cantante);
     }
 
     public void verCantantes(List<Cantante> cantantes) {
         for (Cantante cantante : cantantes) {
-            System.out.println("Datos del Cantante: " + cantante + cantante.getCodigo() );
+            System.out.println("Datos del Cantante: " + cantante + cantante.getCodigo());
         }
     }
 }
