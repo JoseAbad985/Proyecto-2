@@ -63,6 +63,7 @@ public class ControladorCompositor {
     //llama al DAO para guardar un compositor
     public void registrar() {
         compositor = vistaCompositor.ingresarCompositor();
+        System.out.println("Compositor " + compositor);
         cancion = vistaCancion.ingresarCancion();
         compositor.agregarCancion(cancion);
         compositorDAO.create(compositor);
@@ -96,7 +97,7 @@ public class ControladorCompositor {
     }
 
     //llama al DAO para obtener todos los cantantes y luego los muestra en la vista
-    public void verCantantes() {
+    public void verCompositores() {
         List<Compositor> compositores;
         compositores = compositorDAO.findAll();
         vistaCompositor.verCompositores(compositores);

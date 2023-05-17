@@ -28,7 +28,7 @@ public class Compositor extends Persona{
         this.cancionesTop100Billboard = new ArrayList();
         this.clientes = new ArrayList();
     }
-
+    
     public Compositor(int codigo) {
         super(codigo);
     }

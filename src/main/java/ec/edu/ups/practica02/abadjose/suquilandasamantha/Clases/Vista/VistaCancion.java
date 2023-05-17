@@ -17,7 +17,6 @@ public class VistaCancion {
     public Cancion ingresarCancion(){
         Scanner teclado = new Scanner(System.in);
         System.out.println("Se ingresará una cancion para el Compositor");
-        teclado.nextLine();
         System.out.println("Ingrese el codigo de la cancion: ");
         int codigoCan = teclado.nextInt();
         teclado.nextLine();

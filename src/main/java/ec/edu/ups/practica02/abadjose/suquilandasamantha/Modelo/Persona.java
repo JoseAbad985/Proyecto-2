@@ -10,12 +10,12 @@ import java.util.Objects;
  * @author ESTUDIANTE
  */
 public abstract class Persona {
-    private int codigo;
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private String nacionalidad;
-    double salario;
+    protected int codigo;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
+    protected String nacionalidad;
+    protected double salario;
 
     public Persona(int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
         this.codigo = codigo;

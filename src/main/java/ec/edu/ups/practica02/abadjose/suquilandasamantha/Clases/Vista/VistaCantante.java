@@ -82,6 +82,7 @@ public class VistaCantante {
     }
 
     public int buscarCantante() {
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa el id del cantante a buscar");
         int id = teclado.nextInt();
         return id;

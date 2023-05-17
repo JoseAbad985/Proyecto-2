@@ -56,7 +56,9 @@ public class Principal {
                 //Se llama al metodo calcular salario 
                 case 2:
                     controladorCompositor.registrar();
+                    
                     break;
+                    
                 //Se llama al metodo calcular salario
                 case 3:
                     controladorCompositor.registrarCliente();
