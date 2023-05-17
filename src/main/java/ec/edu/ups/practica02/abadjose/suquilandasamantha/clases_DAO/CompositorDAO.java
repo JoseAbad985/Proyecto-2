@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.DAO;
+package ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_DAO;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICompositorDAO;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Compositor;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_IDAO.ICompositorDAO;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Compositor;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

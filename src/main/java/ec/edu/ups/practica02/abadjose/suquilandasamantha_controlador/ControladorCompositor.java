@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador;
+package ec.edu.ups.practica02.abadjose.suquilandasamantha_controlador;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICantanteDAO;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICompositorDAO;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCancion;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCantante;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCompositor;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cancion;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Compositor;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_IDAO.ICantanteDAO;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_IDAO.ICompositorDAO;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_vista.VistaCancion;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_vista.VistaCantante;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_vista.VistaCompositor;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Cancion;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Cantante;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Compositor;
 import java.util.List;
 
 /**

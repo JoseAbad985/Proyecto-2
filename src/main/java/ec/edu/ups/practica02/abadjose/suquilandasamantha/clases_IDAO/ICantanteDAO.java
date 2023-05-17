@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO;
+package ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_IDAO;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Cantante;
 import java.util.List;
 
 /**

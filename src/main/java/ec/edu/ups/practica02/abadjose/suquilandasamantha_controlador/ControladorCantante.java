@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.ups.practica02.abadjose.suquilandasamantha.Controlador;
+package ec.edu.ups.practica02.abadjose.suquilandasamantha_controlador;
 
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.IDAO.ICantanteDAO;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaCantante;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista.VistaDisco;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Cantante;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Disco;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_IDAO.ICantanteDAO;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_vista.VistaCantante;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_vista.VistaDisco;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Cantante;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Disco;
 import java.util.List;
 
 /**

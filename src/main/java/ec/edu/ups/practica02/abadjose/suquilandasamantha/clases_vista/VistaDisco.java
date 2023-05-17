@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.ups.practica02.abadjose.suquilandasamantha.Clases.Vista;
-import ec.edu.ups.practica02.abadjose.suquilandasamantha.Modelo.Disco;
+package ec.edu.ups.practica02.abadjose.suquilandasamantha.clases_vista;
+import ec.edu.ups.practica02.abadjose.suquilandasamantha_modelo.Disco;
 import java.util.List;
 import java.util.Scanner;
 
