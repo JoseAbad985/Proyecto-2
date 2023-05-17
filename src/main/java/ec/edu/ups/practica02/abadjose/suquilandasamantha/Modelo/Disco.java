@@ -50,8 +50,6 @@ public class Disco {
     public int hashCode() {
         int hash = 7;
         hash = 53 * hash + this.codigo;
-        hash = 53 * hash + Objects.hashCode(this.nombre);
-        hash = 53 * hash + this.anioDeLanzamiento;
         return hash;
     }
 

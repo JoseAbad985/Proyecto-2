@@ -31,22 +31,25 @@ public class ControladorCompositor {
     private ICompositorDAO compositorDAO;
     private ICantanteDAO cantanteDAO;
 
-
-    public ControladorCompositor(VistaCompositor vistaCompositor, VistaCancion vistaCancion, Compositor compositor, Cancion cancion, ICompositorDAO compositorDAO) {
+    public ControladorCompositor(VistaCompositor vistaCompositor, VistaCancion vistaCancion, VistaCantante vistaCantante, Compositor compositor, Cancion cancion, Cantante cantante, ICompositorDAO compositorDAO, ICantanteDAO cantanteDAO) {
         this.vistaCompositor = vistaCompositor;
         this.vistaCancion = vistaCancion;
+        this.vistaCantante = vistaCantante;
         this.compositor = compositor;
         this.cancion = cancion;
+        this.cantante = cantante;
         this.compositorDAO = compositorDAO;
-
+        this.cantanteDAO = cantanteDAO;
     }
 
-    public ControladorCompositor(VistaCompositor vistaCompositor, VistaCancion vistaCancion, ICompositorDAO compositorDAO) {
+    public ControladorCompositor(VistaCompositor vistaCompositor, VistaCancion vistaCancion, VistaCantante vistaCantante, ICompositorDAO compositorDAO, ICantanteDAO cantanteDAO) {
         this.vistaCompositor = vistaCompositor;
         this.vistaCancion = vistaCancion;
+        this.vistaCantante = vistaCantante;
         this.compositorDAO = compositorDAO;
-
+        this.cantanteDAO = cantanteDAO;
     }
+    
     
     public void verCompositorxCancion(){
         String nombre = vistaCancion.buscarCancionNombre();
@@ -63,7 +66,6 @@ public class ControladorCompositor {
     //llama al DAO para guardar un compositor
     public void registrar() {
         compositor = vistaCompositor.ingresarCompositor();
-        System.out.println("Compositor " + compositor);
         cancion = vistaCancion.ingresarCancion();
         compositor.agregarCancion(cancion);
         compositorDAO.create(compositor);
@@ -72,8 +74,10 @@ public class ControladorCompositor {
     public void registrarCliente(){
         int id = vistaCompositor.buscarCompositor();
         compositor = compositorDAO.read(id);
+        System.out.println("Compositor seleccionado: " + compositor);
         int id2 = vistaCantante.buscarCantante();
         cantante = cantanteDAO.read(id2);
+        System.out.println("Cantante seleccionado: " + cantante);
         compositor.agregarCliente(cantante);
     }
 

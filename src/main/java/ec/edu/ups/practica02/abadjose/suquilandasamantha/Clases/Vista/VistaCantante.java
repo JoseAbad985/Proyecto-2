@@ -94,7 +94,7 @@ public class VistaCantante {
 
     public void verCantantes(List<Cantante> cantantes) {
         for (Cantante cantante : cantantes) {
-            System.out.println("Datos del Cantante: " + cantante);
+            System.out.println("Datos del Cantante: " + cantante + cantante.getCodigo() );
         }
     }
 }

@@ -65,11 +65,6 @@ public class Cancion {
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + this.codigo;
-        hash = 97 * hash + Objects.hashCode(this.titulo);
-        hash = 97 * hash + Objects.hashCode(this.letra);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.
-                tiempoEnMinutos) ^ (Double.doubleToLongBits(this.
-                        tiempoEnMinutos) >>> 32));
         return hash;
     }
 

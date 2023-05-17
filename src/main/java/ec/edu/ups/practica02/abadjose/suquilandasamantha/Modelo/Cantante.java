@@ -95,18 +95,6 @@ public class Cantante extends Persona {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + Objects.hashCode(this.nombreArtistico);
-        hash = 17 * hash + Objects.hashCode(this.generoMusical);
-        hash = 17 * hash + this.numeroDeSencillos;
-        hash = 17 * hash + this.numeroDeConciertos;
-        hash = 17 * hash + this.numeroDeGiras;
-        hash = 17 * hash + Objects.hashCode(this.discografia);
-        return hash;
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;

@@ -26,6 +26,16 @@ public class Principal {
       que tiene e ingrese lo que desea realizar
          */
         int opcion = 0;
+        VistaCantante vistaCantante = new VistaCantante();
+        VistaCompositor vistaComp = new VistaCompositor();
+        VistaCancion vistaCancion = new VistaCancion();
+        VistaDisco vistaDisco = new VistaDisco();
+        //DAOs//
+        CantanteDAO cantanteDAO = new CantanteDAO();
+        CompositorDAO compositorDAO = new CompositorDAO();
+        //Controladores//
+        ControladorCantante controladorCantante = new ControladorCantante(vistaCantante, vistaDisco, cantanteDAO);
+        ControladorCompositor controladorCompositor = new ControladorCompositor(vistaComp, vistaCancion, vistaCantante, compositorDAO, cantanteDAO);
         do {
             System.out.println("""                              
                                 Menu de Opciones 
@@ -38,42 +48,37 @@ public class Principal {
                                7. Salir""");
             opcion = teclado.nextInt();
             //Vista//
-            VistaCantante vistaCantante = new VistaCantante();
-            VistaCompositor vistaComp = new VistaCompositor();
-            VistaCancion vistaCancion = new VistaCancion();
-            VistaDisco vistaDisco = new VistaDisco();
-            //DAOs//
-            CantanteDAO cantanteDAO = new CantanteDAO();
-            CompositorDAO compositorDAO = new CompositorDAO();
-            //Controladores//
-            ControladorCantante controladorCantante = new ControladorCantante(vistaCantante, vistaDisco, cantanteDAO);
-            ControladorCompositor controladorCompositor = new ControladorCompositor(vistaComp, vistaCancion, compositorDAO);
+
             switch (opcion) {
                 case 1:
+                    //Se registra un Cantante
                     controladorCantante.registrar();
                     break;
 
-                //Se llama al metodo calcular salario 
                 case 2:
+                    //Se registra un Compositor
                     controladorCompositor.registrar();
-                    
                     break;
-                    
-                //Se llama al metodo calcular salario
+
                 case 3:
+                    //Se regustra un Cliente
                     controladorCompositor.registrarCliente();
                     break;
                 case 4:
+                    //Imprimimos la lista de Cantantes y Clientes
                     controladorCantante.verCantantes();
-                    controladorCompositor.verCompositor();
+                    controladorCompositor.verCompositores();
                     break;
                 case 5:
+                    //Buscamos un cantante por el nombre del Disco
                     controladorCantante.verCantantexDisco();
                     break;
                 case 6:
+                    //Buscamos un compositor por el nombre de la Cancion
                     controladorCompositor.verCompositorxCancion();
                     break;
                 case 7:
+                    //Cerramos el codigo
                     System.out.println("Gracias :D ");
                     break;
                 default:
@@ -81,9 +86,7 @@ public class Principal {
                     break;
 
             }
-            //En el caso 1 del menu se ingresa todos los atributos que le pertenecen, por medio del usuario
-            //En el caso 2 del menu se ingresa los datos del compositor, depensiendo de sus atributos, ademas de sus canciones
-            //
+    
         } while (opcion != 7);
     }
 

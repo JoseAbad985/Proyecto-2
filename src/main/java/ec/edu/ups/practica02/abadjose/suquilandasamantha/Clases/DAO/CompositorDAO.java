@@ -30,6 +30,7 @@ public class CompositorDAO implements ICompositorDAO {
     @Override
     public Compositor read(int id) {
         for (Compositor compositor : listaCompositor) {
+            System.out.println(compositor.getCodigo());
             if (compositor.getCodigo() == id) {
                 return compositor;
             }
